@@ -11,6 +11,8 @@
   <% end %>
 
 <%= form_for(task) do |f| %>
+<%= f.label :status, 'ステータス' %>
+<%= f.select :status, [["Done", "Done"], ["Doing", "Doing"],  ["Ready", "Ready"], ["not Ready", "not Ready"] ],  :prompt => "選択してください" %>
 <%= f.label :content, 'タスク' %>
 <%= f.text_field :content %>
 
