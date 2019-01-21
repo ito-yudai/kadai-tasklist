@@ -1,10 +1,12 @@
 <% if logged_in? %>
-<%= redirect_to users_url %>
-<% end %>
+<%= render 'tasks/tasks' %>
 
+<% else %>
 <div class="center jumbotron">
   <div class="text-center">
   <h1>Welcom to the Tasklist</h1>
   <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %> 
   </div>
 </div>
+
+<% end %>
